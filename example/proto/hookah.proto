@@ -1,0 +1,16 @@
+syntax = "proto3";
+package example;
+
+option go_package = "./pkg/pb";
+
+service UsersAndPermissionsService {
+    rpc Smoke(Request) returns (Response) {}
+}
+
+message Request {
+    int32 heat = 1;
+}
+
+message Response {
+    int32 value = 2;
+}
